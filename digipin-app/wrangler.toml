@@ -1,0 +1,23 @@
+name = "digipin-app"
+compatibility_date = "2024-01-01"
+
+[site]
+bucket = "./out"
+
+[build]
+command = "npm run build"
+output = "out"
+
+[env.production]
+name = "digipin-app"
+workers_dev = true
+route = "digipin.link/*"
+zone_id = "739cfcc29a89d5e7402cbc52b7a38aa4"
+
+[[kv_namespaces]]
+binding = "DIGIPIN_KV"
+id = "9f69b4a0d97542db88f5282c8b82444f"
+preview_id = "your-preview-kv-id"
+
+[build.upload]
+format = "service-worker" 
