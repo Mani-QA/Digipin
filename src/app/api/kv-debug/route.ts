@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import { devKV } from '@/utils/kv';
 
+export const runtime = 'edge';
+
 export async function GET() {
   try {
     // Test data

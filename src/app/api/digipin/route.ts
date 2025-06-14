@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 import { getDigiPin, getLatLngFromDigiPin } from '@/utils/digipin';
 import { devKV } from '@/utils/kv';
 
+export const runtime = 'edge';
+
 export async function POST(request: Request) {
   try {
     const { latitude, longitude, customName } = await request.json();

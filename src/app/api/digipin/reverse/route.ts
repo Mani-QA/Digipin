@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import { devKV } from '@/utils/kv';
 
+export const runtime = 'edge';
+
 export async function POST(request: Request) {
   try {
     const { digiPin } = await request.json();

@@ -128,4 +128,6 @@ export default async function CustomDigiPinPage({ params }: PageProps) {
       </div>
     </div>
   );
-} 
+}
+
+export const runtime = 'edge'; 

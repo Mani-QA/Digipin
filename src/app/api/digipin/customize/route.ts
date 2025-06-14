@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 import { devKV } from '@/utils/kv';
 import { digiPinToCoordinates } from '@/utils/digipin';
 
+export const runtime = 'edge';
+
 export async function POST(request: Request) {
   try {
     const { customName, digiPin } = await request.json();
